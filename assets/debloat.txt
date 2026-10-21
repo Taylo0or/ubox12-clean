@@ -1,0 +1,13 @@
+# UBOX 12 (Unblock Tech, Allwinner H618, Android 12) — 2026-10-21
+# A 组：安博全家桶
+com.moons.detection            # 工厂测试，stats.10moons.com 统计上报
+com.example.Upgrade            # 安博 OTA（com.moons.Update.UpdateService，ogw.syslib5978.com）
+com.yanggis.chinatunnelCOM     # UBTunnel，含 root 子进程 chinatunnel_armeabi-v7a
+com.moons.browser              # 安博浏览器，INSTALL_PACKAGES
+com.moons.settingwizard        # 设置向导 5.0.8H618_UBOX
+com.moons.mylauncher12         # 安博启动器（已由 build-and-install.sh 禁用，此处留作回滚记录）
+# D 组：用户 2026-10-21 确认一起禁
+com.mitac.android.i2ctool      # 呼吸灯控制（安博）
+com.nanosic.nanootable         # 遥控器固件 OTA（Nanosic）
+com.hpplay.happyplay.aw        # 乐播投屏 HappyCast
+com.chaozhuo.filemanager       # 超卓文管

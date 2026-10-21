@@ -1,0 +1,13 @@
+{
+  "dock_apps": ["com.huawei.himovceie", "org.smarttube.stable", "com.netflix.ninja", "com.android.tv.settings"],
+  "fill_dock": false,
+  "hidden_apps": ["com.android.chrome", "dnsfilter.android", "com.android.vending"],
+  "app_library": true,
+  "columns": 4,
+  "rows_below_dock": 0,
+  "dock_title": true,
+  "advanced_effects": true,
+  "background_color": "#070A14",
+  "wallpaper": true,
+  "wallpaper_dim": 20
+}

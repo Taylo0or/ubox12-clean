@@ -1,0 +1,6 @@
+#!/bin/bash
+# Step 6: reboot and verify everything survives a cold start.
+source "$(dirname "$0")/lib.sh"; ensure_toolkit
+[ "${NO_REBOOT:-0}" = 1 ] || { reboot_box; wait_for_box || exit 1; sleep 40; }
+tv 'echo "uptime: $(uptime)"; echo "HOME: $(cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.HOME | tail -1)"; echo "enabled unblock pkgs: $(pm list packages -e | grep -iE "ubox|unblock|moons|yanggis" | tr "\n" " ")(should be empty)"; echo "unblock procs: $(ps -A -o NAME | grep -E "moons|Upgrade|nanosic|mitac|yanggis|chinatunnel|hpplay|chaozhuo" | tr "\n" " ")(should be empty)"; echo "listeners: $(netstat -tlnW 2>/dev/null | grep LISTEN | awk "{print \$4}" | tr "\n" " ")"; echo "tun0: $(ip addr show tun0 2>&1 | grep -oE "inet [0-9.]+|does not exist")"; echo "block test: $(ping -c1 -W2 stats.10moons.com 2>&1 | head -1 | grep -oE "\([0-9.]+\)")  (127.0.0.1 = ok)"; echo "tz: $(getprop persist.sys.timezone) / $(date)"; echo "bootanim: $(getprop persist.sys.bootanim.video_file)"; echo "hdmi: $(getprop persist.disp.device_config.hdmi)"; echo "always-on vpn: $(settings get secure always_on_vpn_app)"; echo "adb_enabled: $(settings get global adb_enabled)"; echo "wifi: $(dumpsys wifi | grep -oE "^Wi-Fi is [a-z]+")  bt: $(settings get global bluetooth_on)"'
+shot /tmp/ubox-06-home.png

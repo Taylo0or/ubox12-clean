@@ -1,0 +1,27 @@
+# UBOX 12 block list (2026-10-21). Host name and all sub domains are blocked.
+unblocktech.com
+ub6789.com
+ub2233.com
+us2233.com
+syslib5978.com
+10moons.com
+yanggis.com
+china-ota.com
+zipupsysdwlink.com
+csupdata.com
+appjiagu.com
+wukongiot.net
+wukongtv.com
+bugly.qq.com
+bugly.qcloud.com
+hpplay.cn
+hpplay.com.cn
+yuntiancloud.com
+snssdk.com
+ctobsnssdk.com
+chaozhuo.net
+chaozhuo.org
+phoenixos.com
+phenixos.com
+phoenixstudio.org
+bigbigcloud.cn
